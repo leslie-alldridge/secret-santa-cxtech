@@ -37,14 +37,13 @@ class Main extends Component {
     });
     let shuffledArr = shuffle(this.state.members);
     let matchedArr = [];
-    console.log(shuffledArr);
 
     for (let i = 0; i < shuffledArr.length - 1; i++) {
       matchedArr.push(
         `${shuffledArr[i]} is matched with ${shuffledArr[i + 1]}`
       );
     }
-
+    // this handles the last pair matching with the first user
     if (shuffledArr.length % 2 === 1) {
       matchedArr.push(
         `${shuffledArr[shuffledArr.length - 1]} is matched with ${
@@ -52,8 +51,6 @@ class Main extends Component {
         }`
       );
     }
-
-    console.log(matchedArr);
 
     this.setState({
       pairs: matchedArr

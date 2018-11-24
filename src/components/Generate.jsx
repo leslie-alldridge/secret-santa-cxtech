@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 class Generate extends Component {
-  state = {
-    members: []
-  };
-
   render() {
     return (
       <div>
