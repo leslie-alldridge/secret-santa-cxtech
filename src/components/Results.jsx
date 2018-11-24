@@ -26,6 +26,7 @@ class Results extends Component {
             `${pair[i][0]} is matched with ${pair[i][1] || pair[i - 1][0]}`
           );
           pairArr.push(`${pair[i - 1][1]} is matched with ${pair[i][0]}`);
+          pairArr.push(`${pair[i][1]} is matched with ${pair[i - 1][0]}`);
         }
       }
     });
