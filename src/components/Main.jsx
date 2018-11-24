@@ -37,16 +37,16 @@ class Main extends Component {
     });
     let shuffledArr = shuffle(this.state.members);
     const len = shuffledArr.length;
-    if (len % 2 === 1) {
-      alert("you have an odd number of people, someone will be left out");
-      shuffledArr = shuffledArr.reduce(function(result, value, index, array) {
-        if (index % 2 === 0) result.push(array.slice(index, index + 2));
-        return result;
-      }, []);
-      this.setState({
-        pairs: shuffledArr
-      });
-    }
+    // if (len % 2 === 1) {
+    //alert("you have an odd number of people, someone will be left out");
+    shuffledArr = shuffledArr.reduce(function(result, value, index, array) {
+      if (index % 2 === 0) result.push(array.slice(index, index + 2));
+      return result;
+    }, []);
+    this.setState({
+      pairs: shuffledArr
+    });
+    // }
     shuffledArr = shuffledArr.reduce(function(result, value, index, array) {
       if (index % 2 === 0) result.push(array.slice(index, index + 2));
       return result;

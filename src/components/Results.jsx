@@ -13,6 +13,8 @@ class Results extends Component {
     let pairArr = [];
     this.props.pairs.map(pair => {
       // return pair.map(people => {
+      console.log(this.props.pairs);
+
       for (let i = 0; i < pair.length; i++) {
         console.log(i);
         if (i < 1) {
@@ -39,16 +41,8 @@ class Results extends Component {
     return (
       <div>
         <h1 className="title">The results are: </h1>
-        {this.props.pairs.map(pair => {
-          return pair.map(people => {
-            if (people[people.length - 1].length > 1) {
-              return (
-                <p>
-                  {people[0]} is matched with {people[1] || pair[0][0]}
-                </p>
-              );
-            }
-          });
+        {this.state.pairs.map(pair => {
+          return <p>{pair}</p>;
         })}
       </div>
     );
