@@ -10,7 +10,8 @@ import Results from "./Results";
 class Main extends Component {
   state = {
     members: [],
-    pairs: []
+    pairs: [],
+    results: false
   };
 
   addMember = member => {
@@ -31,6 +32,9 @@ class Main extends Component {
   };
 
   generate = () => {
+    this.setState({
+      results: true
+    });
     let shuffledArr = shuffle(this.state.members);
     const len = shuffledArr.length;
     if (len % 2 === 1) {
@@ -65,7 +69,7 @@ class Main extends Component {
         <NZ addMember={this.addMember} selectedMembers={this.state.members} />
         <AU addMember={this.addMember} selectedMembers={this.state.members} />
         <Generate generate={this.generate} />
-        <Results pairs={this.state.pairs} />
+        {this.state.results && <Results pairs={this.state.pairs} />}
       </div>
     );
   }
