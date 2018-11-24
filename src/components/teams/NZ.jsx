@@ -25,7 +25,7 @@ class NZ extends Component {
           if (this.props.selectedMembers.includes(name)) {
             return (
               <button
-                class="button is-primary"
+                className="button is-primary"
                 key={name}
                 onClick={() => {
                   this.props.addMember(name);
@@ -37,7 +37,7 @@ class NZ extends Component {
           } else {
             return (
               <button
-                class="button is-light"
+                className="button is-light"
                 key={name}
                 onClick={() => {
                   this.props.addMember(name);

@@ -5,6 +5,7 @@ import AU from "./teams/AU";
 import US from "./teams/US";
 import Generate from "./Generate";
 import shuffle from "./shuffle";
+import Results from "./Results";
 
 class Main extends Component {
   state = {
@@ -26,7 +27,6 @@ class Main extends Component {
       this.setState({
         members: [...this.state.members, member]
       });
-      console.log(this.state);
     }
   };
 
@@ -65,6 +65,7 @@ class Main extends Component {
         <NZ addMember={this.addMember} selectedMembers={this.state.members} />
         <AU addMember={this.addMember} selectedMembers={this.state.members} />
         <Generate generate={this.generate} />
+        <Results pairs={this.state.pairs} />
       </div>
     );
   }
