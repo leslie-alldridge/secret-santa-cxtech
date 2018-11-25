@@ -43,14 +43,10 @@ class Main extends Component {
         `${shuffledArr[i]} is matched with ${shuffledArr[i + 1]}`
       );
     }
-    // this handles the last pair matching with the first user
-    if (shuffledArr.length % 2 === 1) {
-      matchedArr.push(
-        `${shuffledArr[shuffledArr.length - 1]} is matched with ${
-          shuffledArr[0]
-        }`
-      );
-    }
+
+    matchedArr.push(
+      `${shuffledArr[shuffledArr.length - 1]} is matched with ${shuffledArr[0]}`
+    );
 
     this.setState({
       pairs: matchedArr
