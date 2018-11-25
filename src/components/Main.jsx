@@ -59,7 +59,7 @@ class Main extends Component {
         <h2 className="title">CX-Tech Secret Santa Generator</h2>
         <h4 className="subtitle">
           Please select team members you want to include below, then hit
-          randomise!
+          Generate!
         </h4>
         <UK addMember={this.addMember} selectedMembers={this.state.members} />
         <US addMember={this.addMember} selectedMembers={this.state.members} />

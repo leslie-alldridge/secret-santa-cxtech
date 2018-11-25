@@ -30,3 +30,17 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  margin-left: 1%;
+}
+
+#submit {
+  color: white;
+  margin-top: 1%;
+}
+
+#results {
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
