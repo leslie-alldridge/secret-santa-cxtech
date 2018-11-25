@@ -1,5 +1,5 @@
-CX Tech Secret Santa
+## CX Tech Secret Santa
 
-Todos:
-loop names instead of placing them in pairs
-styling
+Available at : https://secretsantaleslie.herokuapp.com/
+
+Notes: styling is simplistic as we're only using this app to generate matches at this point in time. 
